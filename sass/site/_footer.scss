@@ -1,0 +1,15 @@
+.site-footer{
+  padding: 20px 0;
+  background-color: $color__background;
+  color: #fff;
+  flex-shrink: 0;
+
+  &__inner{
+    padding: 0 5%;
+    text-align: center;
+  }
+}
+
+.site-info{
+  @include font-size(0.75);
+}

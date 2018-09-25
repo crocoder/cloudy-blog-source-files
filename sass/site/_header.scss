@@ -1,0 +1,50 @@
+.site-custom-header{
+  position: relative;
+  display: table;
+  width: 100%;
+  height: 280px;
+  padding: 0 5%;
+  text-align: center;
+  background-image: url('./assets/cloudy-blog-header-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+  &::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: " ";
+    background-color: rgba(0,0,0,0.3);
+  }
+}
+
+.custom-logo-link{
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.site-branding{
+  position: relative;
+  z-index: 1;
+  display: table-cell;
+  vertical-align: middle;
+  color: #fff;
+
+  & > .site-title{
+    display: inline-block;
+    margin: 0;
+    @include font-size(3.125);
+    font-weight: 700;
+  }
+
+  & > .site-description{
+    margin: 10px 0 0 0;
+    padding: 0;
+    text-transform: uppercase;
+    @include font-size(0.875);
+  }
+}

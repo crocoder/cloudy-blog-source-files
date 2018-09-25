@@ -1,0 +1,77 @@
+/*--------------------------------------------------------------
+## Menu toggler
+--------------------------------------------------------------*/
+.menu-toggler{
+  display: inline-block;
+  padding: 0;
+  background: none;
+  border: none;
+  vertical-align: middle;
+  &:focus{
+    outline: none;
+  }
+}
+
+/*--------------------------------------------------------------
+## Shared - nav
+--------------------------------------------------------------*/
+.navigation{
+  
+  
+  ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  a{
+    text-transform: uppercase;
+    color: $color__link-menu;
+  }
+}
+
+/*--------------------------------------------------------------
+## Primary nav
+--------------------------------------------------------------*/
+.navigation--main{
+  height: $size__site-nav;
+  padding: 0 5%;
+  line-height: $size__site-nav; 
+  position: relative;
+  text-align: center;
+  background-color: $color__background-main-content;
+  border-bottom: 1px solid $color__background-hr;
+
+	ul {
+    position: absolute;
+    z-index: 1;
+    top: calc(100% + 1px);
+    left: 0;
+    right: 0;
+    display: none;
+    background-color: $color__background-main-content;
+    box-shadow: $shadow;
+
+		ul {
+      position: relative;
+      box-shadow: none;
+      @include font-size(0.875);
+
+			li {
+        line-height: 1.6;
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+## Secondary nav
+--------------------------------------------------------------*/
+.navigation--secondary{
+  padding: $size__gutter 0;
+  margin-bottom: $size__gutter;
+  border-bottom: 1px solid $color__background-hr-dark;
+
+  a{
+    color: #fff;
+  }
+}

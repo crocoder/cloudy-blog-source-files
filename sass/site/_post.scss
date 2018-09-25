@@ -1,0 +1,91 @@
+/*--------------------------------------------------------------
+## Standard post
+--------------------------------------------------------------*/
+.std-post{
+  margin-bottom: 40px;
+  
+  &__thumbnail-wrap{
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__author{
+    position: absolute;
+    bottom: $size__gutter;
+    left: $size__gutter;
+  }
+
+  &__body{
+    padding: $size__gutter;
+    background-color: $color__background-main-content;
+    border-bottom: 1px solid $color__background-hr;
+  }
+
+  &__footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: $size__gutter;
+  }
+}
+
+/*--------------------------------------------------------------
+## Shared
+--------------------------------------------------------------*/
+.post-author-link,
+.post-thumbnail-link{
+  display: block;
+  & > img{
+    display: block;
+  }
+}
+
+.post-thumbnail-link > img{
+  transition: transform $time;
+}
+
+.post-author-link> img{
+  border-radius: 20px;
+}
+
+.cat-links > a{
+  display: inline-block;
+  padding: $size__bar-padding;
+  margin: 5px 5px 5px 0;
+  background-color: $color__background;
+  color: #fff;
+  transition: all $time;
+}
+
+.read-more-btn{
+  position: relative;
+  display: block;
+  width: 35px;
+  height: 15px;
+  padding: 5px;
+  flex-shrink: 0;
+
+  &__dot{
+    position: absolute;
+    top: 5px;
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: $color__background;
+    transition: top $time;
+
+    &:first-child{
+      left: 5px;
+    }
+
+    &:nth-child(2){
+      left: 15px;
+    }
+
+    &:last-child{
+      left: 25px;
+    }
+  }
+}
